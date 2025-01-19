@@ -1,11 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="./src/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+
     <title>DevChat Global</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <div>
+          <h2>1</h2>
+          <ul>
+            <li>step</li>
+            <li>your info</li>
+          </ul>
+        </div>
+        <div>
+          <h2>2</h2>
+          <ul>
+            <li>step</li>
+            <li>your info</li>
+          </ul>
+        </div>
+        <div>
+          <h2>3</h2>
+          <ul>
+            <li>step</li>
+            <li>your info</li>
+          </ul>
+        </div>
+        <div>
+          <h2>4</h2>
+          <ul>
+            <li>step</li>
+            <li>your info</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <!-- step 1 start -->
+
+        <form method="post">
+          <h1>Person info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+
+          <label for="name"> Name </label>
+          <input
+            type="text"
+            name="name"
+            value="name"
+            id="name"
+            placeholder="e.g. Stephen King"
+          />
+
+          <label for="email"> E-mail Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="e.g. stephenking@lorem.com"
+          />
+
+          <label for="phone"> Phone number</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="e.g. +1 234 567 890"
+          />
+        </form>
+
+        <!-- step 1 end -->
+
+        <!-- step 2 start -->
+
+        <form method="post">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+
+          <ul>
+            <li>
+              <img src="./src/images/icon-arcade.svg" alt="Arcade" />
+
+              <h2>Arcade</h2>
+              <p>$9/mo</p>
+              <p>
+                2 months free
+                <!-- de base -->
+              </p>
+            </li>
+            <li>
+              <img src="./src/images/icon-advanced.svg" alt="Advanced" />
+              <h2>Advanced</h2>
+              <p>$12/mo</p>
+              <p>
+                2 months free
+                <!-- de base -->
+              </p>
+            </li>
+            <li>
+              <img src="./src/images/icon-pro.svg" alt="Pro" />
+              <h2>Pro</h2>
+              <p>$15/mo</p>
+              <p>
+                2 months free
+                <!-- de base -->
+              </p>
+            </li>
+          </ul>
+
+          <div>
+            <p>Montly</p>
+            <button></button>
+            <p>Yearly</p>
+          </div>
+        </form>
+
+        <!-- step 2 end -->
+        <!-- step 3 start -->
+
+        <form method="post">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+
+          <ul>
+            <li>
+              <input type="checkbox" id="checked" />
+              <div>
+                <p>Online service</p>
+                <p>Access to multiplayer games</p>
+              </div>
+
+              <p>+$1/mo</p>
+            </li>
+            <li>
+              <input type="checkbox" id="checked" />
+              <div>
+                <p>Larger storage</p>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+
+              <p>+$2/mo</p>
+            </li>
+            <li>
+              <input type="checkbox" id="checked" />
+              <div>
+                <p>Customizable Profile</p>
+                <p>Custom theme on your profile</p>
+              </div>
+
+              <p>+$2/mo</p>
+            </li>
+          </ul>
+        </form>
+        <!-- step 3 end -->
+        <!-- step 4 start -->
+
+        <div>
+            <h1>Finishing up</h1>
+            <p> Double-check everything looks OK before confirming. </p>
+
+            <ul>
+                <li>
+                    <p>
+                        <strong> Arcade </strong>
+                        <a href=""> Change </a>
+                    </p>
+                    <p> $9/mo </p>
+                    <hr>
+                </li>
+                <li>
+                    <p> Online service </p>
+                    <p> +1/mo </p>
+                </li>
+                <li>
+                    <p>Larger storage</p>
+                    <p> +2/mo </p>
+                </li>
+            </ul>
+            <div>
+                <p>Total(per month)</p>
+                <p>+12/mo</p>
+            </div>
+        </div>
+
+        <!-- step 4 end -->
+
+        <button type="submit"> Go Back </button>
+        <button type="submit"> Next step </button>
+        <!-- <button type="submit"> Confirm </button> -->
+         
+      </section>
+    </main>
+  </body>
 </html>
