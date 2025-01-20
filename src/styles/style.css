@@ -1,0 +1,76 @@
+main {
+    background-color: #fff;
+    display: flex;
+    width: 850px;
+    height: 550px;
+    border-radius: 10px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    padding: 20px;
+}
+
+.indicators {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 500px;
+    padding: 20px;
+    background-image: url("../images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+.indicatorsInformations {
+    display: flex;
+    padding: 10px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #fff;
+}
+
+.indicatorsInformations h2 {
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.indicatorsInformations ul li:nth-child(odd) {
+    opacity: 50%;
+}
+
+.allPages {
+    width: 500px;
+    height: 350px;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.pages {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px
+}
+
+.pages h1 {
+    font-size: 24px;
+    color: hsl(213, 96%, 18%);
+}
+
+.pages p {
+    opacity: 50%;
+}
+
+.pages input {
+    padding: 10px;
+    margin-top: -5px;
+}
