@@ -4,9 +4,9 @@ main {
     width: 850px;
     height: 550px;
     border-radius: 10px;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
-    justify-content: center;
+    justify-content:space-between;
     position: absolute;
     top: 20%;
     left: 25%;
@@ -16,7 +16,7 @@ main {
 .indicators {
     display: flex;
     flex-direction: column;
-    width: 240px;
+    width: 250px;
     height: 500px;
     padding: 20px;
     background-image: url("../images/bg-sidebar-desktop.svg");
@@ -45,32 +45,175 @@ main {
 
 .indicatorsInformations ul li:nth-child(odd) {
     opacity: 50%;
+    font-size: 14px;
 }
 
 .allPages {
     width: 500px;
-    height: 350px;
-    padding: 30px;
+    height: 450px;
     border: 1px solid black;
 }
 
-.pages {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px
-}
-
-.pages h1 {
+.allPages h1{
     font-size: 24px;
     color: hsl(213, 96%, 18%);
 }
 
-.pages p {
+.allPages label{
+    color: hsl(213, 96%, 18%);
+}
+
+.allPages input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.page1 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.page1 p {
+        opacity: 50%;
+        margin-bottom: 15px;
+}
+
+.page2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.page2 ul{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.page2 p {
+        opacity: 50%;     
+}
+
+.plans{
+    border: 1px solid hsl(213, 96%, 18%);
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 20px;
+    gap: 10px;
+    color: hsl(213, 96%, 18%);  
+}
+
+.plans img{
+    margin-bottom: 35px;
+}
+
+.page3{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.page3 p:nth-child(2){
     opacity: 50%;
 }
 
-.pages input {
-    padding: 10px;
-    margin-top: -5px;
+.add-ons{
+    display: flex;
+    align-items: center;
+    justify-content:stretch;
+    width: 100%;
 }
+
+.add-ons :nth-child(3){
+    position: absolute;
+    right: 50px;
+    color: hsl(243, 100%, 62%);
+    font-size: 14px;
+}
+
+.finish{
+    /* display: none; */
+    padding: 10px;
+    gap: 10px;
+}
+
+.finish p{
+    opacity: 50%;
+}
+
+.summary{
+    border: 1px solid red;
+    margin-top: 25px;
+}
+
+
+.toggle-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: hsl(213, 96%, 18%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(213, 96%, 18%);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
