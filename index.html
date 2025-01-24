@@ -3,26 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevChat Global</title>
     <link rel="stylesheet" href="./src/styles/style.css">
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet">
 
     <link
       rel="shortcut icon"
       href="./src/images/favicon-32x32.png"
-      type="image/x-icon"
-    />
+      type="image/x-icon" />
 
-    <title>DevChat Global</title>
   </head>
 
   <body>
     <main>
       <section class="indicators">
         <div class="indicatorsInformations">
-          <h2>1</h2>
+          <h2 class="active-states">1</h2>
           <ul>
             <li>step 1</li>
             <li>your info</li>
@@ -54,9 +55,9 @@
       <section class="allPages">
         <!-- step 1 start -->
 
-        <form method="post" class="pages">
+        <form method="post" class="page1">
           <h1>Personal info</h1>
-          <p>Please provide your name, email address, and phone number.</p>
+          <h3>Please provide your name, email address, and phone number.</h3>
 
           <label for="name"> Name </label>
           <input
@@ -64,68 +65,69 @@
             name="name"
             value="name"
             id="name"
-            placeholder="e.g. Stephen King"
-          />
+            placeholder="e.g. Stephen King" />
 
           <label for="email"> E-mail Address</label>
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="e.g. stephenking@lorem.com"
-          />
+            placeholder="e.g. stephenking@lorem.com" />
 
           <label for="phone"> Phone number</label>
           <input
             type="number"
             name="phone"
             id="phone"
-            placeholder="e.g. +1 234 567 890"
-          />
+            placeholder="e.g. +1 234 567 890" />
+
         </form>
 
         <!-- step 1 end -->
 
         <!-- step 2 start -->
 
-        <form method="post">
+        <form method="post" class="allPages page2">
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing.</p>
 
           <ul>
-            <li>
+            <button class="plans">
               <img src="./src/images/icon-arcade.svg" alt="Arcade" />
 
               <h2>Arcade</h2>
               <p>$9/mo</p>
-              <p>
+              <p class="yearly-option">
                 2 months free
                 <!-- de base -->
               </p>
-            </li>
-            <li>
+            </button>
+            <button class="plans">
               <img src="./src/images/icon-advanced.svg" alt="Advanced" />
               <h2>Advanced</h2>
               <p>$12/mo</p>
-              <p>
+              <p class="yearly-option">
                 2 months free
                 <!-- de base -->
               </p>
-            </li>
-            <li>
+            </button>
+            <button class="plans">
               <img src="./src/images/icon-pro.svg" alt="Pro" />
               <h2>Pro</h2>
               <p>$15/mo</p>
-              <p>
+              <p class="yearly-option">
                 2 months free
                 <!-- de base -->
               </p>
-            </li>
+            </button>
           </ul>
 
-          <div>
+          <div class="toggle-container">
             <p>Montly</p>
-            <button></button>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
             <p>Yearly</p>
           </div>
         </form>
@@ -133,33 +135,33 @@
         <!-- step 2 end -->
         <!-- step 3 start -->
 
-        <form method="post">
+        <form method="post" class="allPages page3">
           <h1>Pick add-ons</h1>
-          <p>Add-ons help enhance your gaming experience.</p>
+          <h3>Add-ons help enhance your gaming experience.</h3>
 
           <ul>
-            <li>
+            <li class="plans add-ons">
               <input type="checkbox" id="checked" />
               <div>
-                <p>Online service</p>
+                <p><strong>Online service</strong></p>
                 <p>Access to multiplayer games</p>
               </div>
 
               <p>+$1/mo</p>
             </li>
-            <li>
+            <li class="plans add-ons">
               <input type="checkbox" id="checked" />
               <div>
-                <p>Larger storage</p>
+                <p><strong>Larger storage</strong></p>
                 <p>Extra 1TB of cloud save</p>
               </div>
 
               <p>+$2/mo</p>
             </li>
-            <li>
+            <li class="plans add-ons">
               <input type="checkbox" id="checked" />
               <div>
-                <p>Customizable Profile</p>
+                <p><strong>Customizable Profile</strong></p>
                 <p>Custom theme on your profile</p>
               </div>
 
@@ -170,40 +172,41 @@
         <!-- step 3 end -->
         <!-- step 4 start -->
 
-        <div>
-            <h1>Finishing up</h1>
-            <p> Double-check everything looks OK before confirming. </p>
+        <div class="allPages finish">
+          <h1>Finishing up</h1>
+          <h3> Double-check everything looks OK before confirming. </h3>
+          <!--aqui fiz um teste colocando um h3 para melhor estilizar os outros "p"-->
 
-            <ul>
-                <li>
-                    <p>
-                        <strong> Arcade </strong>
-                        <a href=""> Change </a>
-                    </p>
-                    <p> $9/mo </p>
-                    <hr>
-                </li>
-                <li>
-                    <p> Online service </p>
-                    <p> +1/mo </p>
-                </li>
-                <li>
-                    <p>Larger storage</p>
-                    <p> +2/mo </p>
-                </li>
-            </ul>
-            <div>
-                <p>Total(per month)</p>
-                <p>+12/mo</p>
-            </div>
+          <ul class="summary">
+            <li class="plan-option">
+              <p class="plan-link">
+                <strong> Arcade </strong>
+                <a href> Change </a>
+              </p>
+              <p> $9/mo </p>
+            </li>
+            <hr>
+            <li class="plan-option">
+              <p> Online service </p>
+              <p> +1/mo </p>
+            </li>
+            <li class="plan-option">
+              <p>Larger storage</p>
+              <p> +2/mo </p>
+            </li>
+          </ul>
+          <div class="total plan-option">
+            <p>Total (per month)</p>
+            <p>+12/mo</p>
+          </div>
         </div>
 
         <!-- step 4 end -->
-
-        <button type="submit"> Go Back </button>
-        <button type="submit"> Next step </button>
-        <!-- <button type="submit"> Confirm </button> -->
-         
+        <div class="btn-container">
+          <button type="submit" class="btn-back"> Go Back </button>
+          <button type="submit" class="btn-next"> Next step </button>
+          <!-- <button type="submit"> Confirm </button> -->
+        </div>
       </section>
     </main>
   </body>
