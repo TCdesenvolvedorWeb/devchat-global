@@ -1,7 +1,7 @@
 main {
     background-color: #fff;
     display: flex;
-    width: 850px;
+    max-width: 850px;
     height: 550px;
     border-radius: 10px;
     gap: 40px;
@@ -84,8 +84,8 @@ main {
 }
 
 .page1 {
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
@@ -97,7 +97,7 @@ main {
 }
 
 .page2 {
-    /* display: none; */
+    display: none;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
@@ -134,6 +134,12 @@ main {
     visibility: hidden;
 }
 
+.select-option {
+    color: hsl(213, 96%, 18%);
+    opacity: 1 !important;
+    font-weight: 600;
+}
+
 .page3 {
     display: none;
     flex-direction: column;
@@ -149,7 +155,7 @@ main {
     display: flex;
     flex-direction: row !important;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: left;
     width: 100%;
 }
 
@@ -189,7 +195,8 @@ main {
     margin: 10px;
 }
 
-.plan-option p,a {
+.plan-option p,
+a {
     font-size: 12px;
 }
 

@@ -1,0 +1,129 @@
+@media(max-width: 800px) {
+    main {
+        max-width: 100%;
+        flex-wrap: wrap;
+        position: relative;
+        background-color: lightblue;
+    }
+
+    .indicators {
+        background-image: url('../images/bg-sidebar-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 200px;
+    }
+
+    .indicatorsInformations ul {
+        display: none;
+    }
+
+    .indicators {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .allPages {
+        max-width: 100vh;
+    }
+
+    .page1 {
+        padding: 5px 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        top: -150px;
+        margin: 15px;
+        min-height: 300px;
+        position: relative;
+    }
+
+    .page1 label {
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .btn-container {
+        width: 100%;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    .btn-container button {
+        padding: 8px;
+        border-radius: 0;
+        margin: 10px;
+    }
+
+    .page2 {
+        background-color: #fff;
+        border-radius: 10px;
+        min-height: 300px;
+        top: -140px;
+        margin: 15px;
+        width: 90%;
+    }
+
+    .page2 ul {
+        flex-direction: column;
+    }
+
+    .plans {
+        margin-top: 5px;
+        margin-bottom: 12px;
+        padding: 35px;
+        position: relative;
+        min-height: 100%;
+    }
+
+    .plans img {
+        position: absolute;
+        top: 15px;
+    }
+
+    .plans h2 {
+        position: absolute;
+        left: 85px;
+        top: 10px;
+    }
+
+    .plans p:nth-child(odd) {
+        position: absolute;
+        left: 85px;
+        top: 30px;
+    }
+
+    .plans p:nth-child(even) {
+        position: absolute;
+        left: 85px;
+        top: 50px;
+    }
+
+    .page3 {
+        background-color: #fff;
+        border-radius: 10px;
+        top: -140px;
+        margin: 15px;
+        width: 90%;
+    }
+
+    .add-ons {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .plans p:nth-child(3) {
+        position: absolute;
+        left: 225px;
+        top: 15px;
+    }
+
+    .finish {
+        background-color: #fff;
+        border-radius: 10px;
+        top: -140px;
+        margin: 15px;
+        width: 90%;
+    }
+}
