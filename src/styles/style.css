@@ -1,7 +1,7 @@
 main {
     background-color: #fff;
     display: flex;
-    width: 850px;
+    max-width: 850px;
     height: 550px;
     border-radius: 10px;
     gap: 40px;
@@ -187,7 +187,8 @@ main {
     margin: 10px;
 }
 
-.plan-option p,a {
+.plan-option p,
+a {
     font-size: 12px;
 }
 
