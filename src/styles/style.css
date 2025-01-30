@@ -81,8 +81,8 @@ main {
 }
 
 .page1 {
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
@@ -94,12 +94,7 @@ main {
 }
 
 .page2 {
-<<<<<<< Updated upstream
-    /* display: none; */
-    flex-direction: column;
-=======
     display: none;
->>>>>>> Stashed changes
     padding: 10px;
     gap: 10px;
 }
@@ -151,11 +146,7 @@ main {
     display: flex;
     flex-direction: row !important;
     align-items: center;
-<<<<<<< Updated upstream
-    justify-content: flex-start;
-=======
     justify-content: space-between;
->>>>>>> Stashed changes
     width: 100%;
 }
 
