@@ -1,0 +1,146 @@
+@media(max-width: 1024px) {
+    main {
+        max-width: 100%;
+        background-color: lightblue;
+    }
+
+    .allPages {
+        max-width: 100vh;
+    }
+
+    .page1 {
+        background-color: #fff;
+        border-radius: 10px;
+        min-height: 300px;
+    }
+
+    .btn-container {
+        width: 100%;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    .btn-container button {
+        padding: 8px;
+        border-radius: 0;
+        margin: 10px;
+    }
+
+    .page2 {
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .page3 {
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .finish {
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    main {
+        max-width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .indicators {
+        background-image: url('../images/bg-sidebar-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 200px;
+    }
+
+    .indicatorsInformations ul {
+        display: none;
+    }
+
+    .indicators {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .allPages {
+        max-width: 100vh;
+    }
+
+    .btn-container {
+        position: relative;
+        bottom: 90px;
+    }
+
+    .page1 {
+        top: -150px;
+        margin: 15px;
+        position: relative;
+    }
+
+    .page1 label {
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .page2 {
+        top: -140px;
+        margin: 15px;
+        width: 94%;
+    }
+
+    .page2 ul {
+        flex-direction: column;
+    }
+
+    .plans {
+        margin-top: 5px;
+        margin-bottom: 12px;
+        padding: 40px;
+        position: relative;
+        min-height: 100%;
+    }
+
+    .plans img {
+        position: absolute;
+        top: 15px;
+    }
+
+    .plans h2 {
+        position: absolute;
+        left: 85px;
+        top: 10px;
+    }
+
+    .plans :nth-child(3){
+        position: absolute;
+        left: 85px ;
+    }
+
+    .page3 {
+        top: -140px;
+        margin: 15px;
+        width: 94%;
+    }
+
+    .finish {
+        top: -140px;
+        margin: 15px;
+        width: 94%;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .page3 {
+        width: 94%;
+    }
+}

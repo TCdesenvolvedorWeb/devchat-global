@@ -7,9 +7,6 @@ main {
     gap: 40px;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top: 10%;
-    left: 20%;
     padding: 20px;
 }
 
@@ -97,8 +94,12 @@ main {
 }
 
 .page2 {
+<<<<<<< Updated upstream
     /* display: none; */
     flex-direction: column;
+=======
+    display: none;
+>>>>>>> Stashed changes
     padding: 10px;
     gap: 10px;
 }
@@ -124,6 +125,7 @@ main {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    width: 100%;
 }
 
 .plans img {
@@ -149,12 +151,12 @@ main {
     display: flex;
     flex-direction: row !important;
     align-items: center;
+<<<<<<< Updated upstream
     justify-content: flex-start;
+=======
+    justify-content: space-between;
+>>>>>>> Stashed changes
     width: 100%;
-}
-
-.add-ons input {
-    margin-right: 10px;
 }
 
 .add-ons :nth-child(2) {
@@ -162,8 +164,6 @@ main {
 }
 
 .add-ons :nth-child(3) {
-    position: absolute;
-    right: 50px;
     color: hsl(243, 100%, 62%);
     font-size: 14px;
 }
