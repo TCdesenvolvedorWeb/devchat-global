@@ -14,5 +14,7 @@ body{
     min-height: 100vh;
     background-color: lightblue;
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }

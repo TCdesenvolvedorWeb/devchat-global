@@ -1,9 +1,56 @@
-@media(max-width: 800px) {
+@media(max-width: 1024px) {
+    main {
+        max-width: 100%;
+        background-color: lightblue;
+    }
+
+    .allPages {
+        max-width: 100vh;
+    }
+
+    .page1 {
+        background-color: #fff;
+        border-radius: 10px;
+        min-height: 300px;
+    }
+
+    .btn-container {
+        width: 100%;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    .btn-container button {
+        padding: 8px;
+        border-radius: 0;
+        margin: 10px;
+    }
+
+    .page2 {
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .page3 {
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .finish {
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+    }
+}
+
+@media(max-width: 768px) {
     main {
         max-width: 100%;
         flex-wrap: wrap;
-        position: relative;
-        background-color: lightblue;
+        align-items: center;
+        justify-content: center;
     }
 
     .indicators {
@@ -28,13 +75,14 @@
         max-width: 100vh;
     }
 
+    .btn-container {
+        position: relative;
+        bottom: 90px;
+    }
+
     .page1 {
-        padding: 5px 15px;
-        background-color: #fff;
-        border-radius: 10px;
         top: -150px;
         margin: 15px;
-        min-height: 300px;
         position: relative;
     }
 
@@ -43,25 +91,10 @@
         font-size: 12px;
     }
 
-    .btn-container {
-        width: 100%;
-        justify-content: space-between;
-        background-color: #fff;
-    }
-
-    .btn-container button {
-        padding: 8px;
-        border-radius: 0;
-        margin: 10px;
-    }
-
     .page2 {
-        background-color: #fff;
-        border-radius: 10px;
-        min-height: 300px;
         top: -140px;
         margin: 15px;
-        width: 90%;
+        width: 94%;
     }
 
     .page2 ul {
@@ -71,7 +104,7 @@
     .plans {
         margin-top: 5px;
         margin-bottom: 12px;
-        padding: 35px;
+        padding: 40px;
         position: relative;
         min-height: 100%;
     }
@@ -87,43 +120,28 @@
         top: 10px;
     }
 
-    .plans p:nth-child(odd) {
+   .page2 .plans :nth-child(3){
         position: absolute;
-        left: 85px;
-        top: 30px;
-    }
-
-    .plans p:nth-child(even) {
-        position: absolute;
-        left: 85px;
-        top: 50px;
+        left: 85px ;
+        font-size: 14px;
     }
 
     .page3 {
-        background-color: #fff;
-        border-radius: 10px;
         top: -140px;
         margin: 15px;
-        width: 90%;
-    }
-
-    .add-ons {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .plans p:nth-child(3) {
-        position: absolute;
-        left: 225px;
-        top: 15px;
+        width: 94%;
     }
 
     .finish {
-        background-color: #fff;
-        border-radius: 10px;
         top: -140px;
         margin: 15px;
-        width: 90%;
+        width: 94%;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .page3 {
+        width: 94%;
     }
 }
