@@ -131,6 +131,13 @@ main {
     visibility: hidden;
 }
 
+.select-option{
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    opacity: 1!important;
+
+}
+
 .page3 {
     display: none;
     flex-direction: column;

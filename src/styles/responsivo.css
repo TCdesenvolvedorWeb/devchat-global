@@ -120,9 +120,10 @@
         top: 10px;
     }
 
-    .plans :nth-child(3){
+   .page2 .plans :nth-child(3){
         position: absolute;
         left: 85px ;
+        font-size: 14px;
     }
 
     .page3 {
