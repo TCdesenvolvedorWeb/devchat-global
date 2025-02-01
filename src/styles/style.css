@@ -80,6 +80,15 @@ main {
     margin-bottom: 10px;
 }
 
+#phone::-webkit-inner-spin-button,
+#phone::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#phone::-moz-appearance {
+    appearance: textfield;
+}
+
 .page1 {
     display: flex;
     flex-direction: column;
@@ -110,8 +119,9 @@ main {
 }
 
 .plans {
-    border: 1px solid hsl(213, 96%, 18%);
+    border: 1px solid hsl(0, 0%, 69%);
     border-radius: 5px;
+    background: none;
     margin-top: 25px;
     margin-bottom: 20px;
     padding: 20px;
@@ -121,6 +131,17 @@ main {
     flex-direction: column;
     cursor: pointer;
     width: 100%;
+}
+
+.plans:hover,
+.add-ons:hover {
+    border: 2px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);
+}
+
+.plans.selected {
+    border: 2px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);
 }
 
 .plans img {
@@ -154,11 +175,18 @@ main {
 }
 
 .add-ons {
-    display: flex;
     flex-grow: 1;
-    flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid hsl(0, 0%, 69%);
+    border-radius: 5px;
+    background: none;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+   
+    color: hsl(213, 96%, 18%);
+    cursor: pointer;
     width: 100%;
 }
 
@@ -170,6 +198,11 @@ main {
 .add-ons :nth-child(3) {
     color: hsl(243, 100%, 62%);
     font-size: 14px;
+}
+
+.add-ons label {
+    display: flex;
+    gap: 8px;
 }
 
 .finish {
@@ -229,6 +262,10 @@ a {
     background-color: white;
     cursor: pointer;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.btn-back.disable {
+    visibility: hidden;
 }
 
 .btn-back:hover {
