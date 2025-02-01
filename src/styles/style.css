@@ -102,6 +102,23 @@ main {
     margin-bottom: 15px;
 }
 
+.page1 .personal-info-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page1 .required-message {
+    color: red;
+}
+
+.page1 input {
+    border-radius: 10px;
+}
+
+.page1 .required {
+    border: 1px solid red;
+}
+
 .page2 {
     display: none;
     padding: 10px;
@@ -278,6 +295,7 @@ a {
     color: white;
     background-color: hsl(213, 96%, 18%);
     padding: 10px 20px;
+    border: none;
     border-radius: 10px;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
