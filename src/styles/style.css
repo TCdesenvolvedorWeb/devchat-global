@@ -40,7 +40,7 @@ main {
     border-radius: 50%;
 }
 
-.active-states {
+.active-state {
     background-color: hsl(206, 94%, 87%);
     color: hsl(213, 96%, 18%);
 }
@@ -81,11 +81,11 @@ main {
 }
 
 .page1 {
-    /* display: none; */
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
+    display: none;
 }
 
 .page1 p {
@@ -128,14 +128,18 @@ main {
 }
 
 .yearly-option {
-    visibility: hidden;
+    color: hsl(213, 96%, 18%);
+    display: none;
 }
 
-.select-option{
-    color: hsl(213, 96%, 18%);
+.select-period-option {
+    color: hsl(220, 2%, 63%);
     font-weight: 500;
-    opacity: 1!important;
+    opacity: 1 !important;
+}
 
+.select-period-option.selected {
+    color: hsl(213, 96%, 18%);
 }
 
 .page3 {
@@ -283,7 +287,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: hsl(213, 96%, 18%);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -321,4 +325,17 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.yearly-option.opacity {
+    display: block;
+    opacity: 100%;
+    font-weight: 500;
 }
