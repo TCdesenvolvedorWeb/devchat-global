@@ -115,6 +115,10 @@ main {
     border-radius: 10px;
 }
 
+.page1 .input-personal-info {
+    border: 1px solid hsl(0, 0%, 69%);
+}
+
 .page1 .required {
     border: 1px solid red;
 }
@@ -151,7 +155,8 @@ main {
 }
 
 .plans:hover,
-.add-ons:hover {
+.add-ons:hover,
+.add-ons.checked {
     border: 2px solid hsl(243, 100%, 62%);
     background-color: hsl(217, 100%, 97%);
 }
@@ -227,10 +232,31 @@ main {
     gap: 10px;
 }
 
+hr {
+    width: 92%;
+    margin: 10px 20px;
+}
+
+.finish .btn-change {
+    border: none;
+    background: none;
+    font-size: 12px;
+    text-decoration: underline;
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+}
+
+.finish .btn-change:hover {
+    cursor: pointer;
+    color: hsl(243, 100%, 62%);
+    
+}
+
 .summary {
     background-color: hsl(217, 100%, 97%);
     margin-top: 25px;
     margin-bottom: 25px;
+    border-radius: 10px;
 }
 
 .plan-option {
@@ -245,6 +271,10 @@ main {
 .plan-option p,
 a {
     font-size: 12px;
+}
+
+.plan-option .plan-final-price {
+    font-size: 18px;
 }
 
 .plan-option:first-child {
@@ -262,9 +292,9 @@ a {
     opacity: 50%;
 }
 
-.total p:last-child {
+.total .total-value {
     color: hsl(243, 100%, 62%);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 

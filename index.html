@@ -78,7 +78,7 @@
         <p>You have the option of monthly or yearly billing.</p>
 
         <ul>
-          <button class="plans">
+          <button class="plans selected">
             <img src="./src/images/icon-arcade.svg" alt="Arcade" />
 
             <h2>Arcade</h2>
@@ -127,7 +127,7 @@
         <ul>
           <li class="add-ons">
             <label for="online-service">
-              <input type="checkbox" id="online-service" />
+              <input type="checkbox" id="online-service" class="add-ons-input"/>
               <div>
                 <p><strong>Online service</strong></p>
                 <p>Access to multiplayer games</p>
@@ -138,7 +138,7 @@
           </li>
           <li class="add-ons">
             <label for="larger-storage">
-              <input type="checkbox" id="larger-storage" />
+              <input type="checkbox" id="larger-storage" class="add-ons-input"/>
               <div>
                 <p><strong>Larger storage</strong></p>
                 <p>Extra 1TB of cloud save</p>
@@ -149,7 +149,7 @@
           </li>
           <li class="add-ons">
             <label for="customizable-profile">
-              <input type="checkbox" id="customizable-profile" />
+              <input type="checkbox" id="customizable-profile" class="add-ons-input"/>
               <div>
                 <p><strong>Customizable Profile</strong></p>
                 <p>Custom theme on your profile</p>
@@ -172,23 +172,23 @@
           <li class="plan-option">
             <p class="plan-link">
               <strong> Arcade </strong>
-              <a href> Change </a>
+              <button class="btn-change" id="btn-change">Change</button>
             </p>
-            <p> $9/mo </p>
+            <p class="plan-final-price"> $9/mo </p>
           </li>
           <hr>
-          <li class="plan-option">
+          <!-- <li class="plan-option">
             <p> Online service </p>
             <p> +1/mo </p>
           </li>
           <li class="plan-option">
             <p>Larger storage</p>
             <p> +2/mo </p>
-          </li>
+          </li>  -->
         </ul>
         <div class="total plan-option">
           <p>Total (per month)</p>
-          <p>+12/mo</p>
+          <p class="total-value">+12/mo</p>
         </div>
       </form>
 
