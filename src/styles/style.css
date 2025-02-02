@@ -56,7 +56,7 @@ main {
 
 .allPages {
     width: 500px;
-    height: 450px;
+    height: auto;
     position: relative;
 }
 
@@ -201,7 +201,6 @@ main {
     margin-top: 25px;
     margin-bottom: 20px;
     padding: 20px;
-   
     color: hsl(213, 96%, 18%);
     cursor: pointer;
     width: 100%;
@@ -308,9 +307,9 @@ a {
 .btn-container {
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    z-index: 1;
+    z-index: 1; */
     width: 500px;
 }
 
@@ -387,7 +386,6 @@ input:checked+.slider:before {
     display: flex;
     flex-direction: column;
 }
-
 
 .yearly-option.opacity {
     display: block;
