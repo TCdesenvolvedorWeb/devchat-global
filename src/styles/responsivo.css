@@ -47,9 +47,9 @@
 
 @media(max-width: 768px) {
     main {
-        max-width: 100%;
+        max-width: 100vw;
+        height: 100vh;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
     }
 
@@ -59,29 +59,29 @@
         background-repeat: no-repeat;
         width: 500px;
         height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        transform: translateY(-25px);
     }
 
     .indicatorsInformations ul {
         display: none;
     }
 
-    .indicators {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
     .allPages {
-        max-width: 100vh;
+        height: 300px;
+        max-width: 100vw;
+        justify-content: center;
     }
 
     .btn-container {
         position: relative;
-        bottom: 90px;
+        bottom: 185px;
     }
 
     .page1 {
-        top: -150px;
+        top: -180px;
         margin: 15px;
         position: relative;
     }
@@ -92,7 +92,7 @@
     }
 
     .page2 {
-        top: -140px;
+        transform: translateY(-190px);
         margin: 15px;
         width: 94%;
     }
@@ -101,17 +101,21 @@
         flex-direction: column;
     }
 
+    .page2 button {
+        gap: 5px
+    }
+
     .plans {
-        margin-top: 5px;
-        margin-bottom: 12px;
+        margin: 0;
         padding: 40px;
         position: relative;
-        min-height: 100%;
+        /* height: 100vh; */
     }
 
     .plans img {
         position: absolute;
         top: 15px;
+        left: 25px;
     }
 
     .plans h2 {
@@ -120,20 +124,32 @@
         top: 10px;
     }
 
-   .page2 .plans :nth-child(3){
+    .page2 .plans :nth-child(3) {
         position: absolute;
-        left: 85px ;
+        left: 85px;
+        top: 35px;
+        font-size: 14px;
+    }
+
+    .yearly-option.opacity {
+        position: absolute;
+        left: 85px;
+        top: 55px;
         font-size: 14px;
     }
 
     .page3 {
-        top: -140px;
+        transform: translateY(-190px);
         margin: 15px;
         width: 94%;
     }
 
+    .add-ons {
+        margin: 5px;
+    }
+
     .finish {
-        top: -140px;
+        transform: translateY(-190px);
         margin: 15px;
         width: 94%;
     }
