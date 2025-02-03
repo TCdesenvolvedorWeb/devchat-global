@@ -10,6 +10,7 @@ const plans = document.querySelectorAll('.plans');
 const inputPersonalInfo = document.querySelectorAll('.input-personal-info');
 const requiredMessage = document.querySelectorAll('.required-message');
 const addOns = document.querySelectorAll('.add-ons');
+const priceServices = document.querySelectorAll('.price-services')
 
 
 let formAtual = 0;
@@ -101,7 +102,14 @@ toggleButton.addEventListener('change', function () {
             if (index === 0) e.innerHTML = '$90/yr';
             if (index === 1) e.innerHTML = '$120/yr';
             if (index === 2) e.innerHTML = '$150/yr';
-        });
+        }
+        
+    );
+        priceServices.forEach((e,index )=>{
+            if (index === 0) e.innerHTML = '+$10/yr'
+            if (index === 1) e.innerHTML = '+$20/yr'
+            if (index === 2) e.innerHTML = '+$20/yr'
+        })
 
     } else {
         yearlyOption.forEach(element => {
@@ -119,6 +127,11 @@ toggleButton.addEventListener('change', function () {
             if (index === 1) e.innerHTML = '$12/mo';
             if (index === 2) e.innerHTML = '$15/mo';
         });
+        priceServices.forEach((e,index )=>{
+            if (index === 0) e.innerHTML = '+$1/mo'
+            if (index === 1) e.innerHTML = '+$2/mo'
+            if (index === 2) e.innerHTML = '+$2/mo'
+        })
         console.log('desativou');
 
     }
