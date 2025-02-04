@@ -19,6 +19,7 @@ function validateForm() {
     const emptyInput = [...inputPersonalInfo].some(input => input.value === '');
     if (emptyInput) {
         validateInput();
+        messageFildIsRequired(emptyInput);
     } else {
 
         const formAtivo = document.querySelector('.active');
@@ -36,23 +37,24 @@ function validateForm() {
             btnBackDisable.classList.remove('disable');
         }
 
+        messageFildIsRequired(emptyInput);
     }
 }
 
-function validateInput() {
+function messageFildIsRequired(emptyInput) {
+    requiredMessage.forEach((message, index) => {
+        if (emptyInput && inputPersonalInfo[index].value === "") {
+            message.classList.add('show');
+        } else {
+            message.classList.remove('show');
+        }
+    });
+}
 
+function validateInput() {
     inputPersonalInfo.forEach(input => {
-        // const requiredMessage = document.querySelectorAll('.required-message');
         if (input.value === '') {
             input.classList.add('required');
-            // requiredMessage.forEach(message => {
-            //     if (input.value === '') {
-            //         message.innerHTML = 'This field is required';
-            //     } else {
-            //         message.innerHTML = '';
-            //     }
-
-            // });
         } else {
             input.classList.remove('required');
         }
@@ -86,9 +88,8 @@ btnBack.addEventListener('click', () => {
 })
 
 let contador = 0;
+let valor = 'monthly';
 toggleButton.addEventListener('change', function () {
-
-
     if (toggleButton.checked) {
         yearlyOption.forEach(element => {
             element.classList.add('opacity');
@@ -103,20 +104,19 @@ toggleButton.addEventListener('change', function () {
             if (index === 1) e.innerHTML = '$120/yr';
             if (index === 2) e.innerHTML = '$150/yr';
         }
-        
-    );
-        priceServices.forEach((e,index )=>{
+
+        );
+        priceServices.forEach((e, index) => {
             if (index === 0) e.innerHTML = '+$10/yr'
             if (index === 1) e.innerHTML = '+$20/yr'
             if (index === 2) e.innerHTML = '+$20/yr'
         })
+        valor = 'yearly'
 
     } else {
         yearlyOption.forEach(element => {
             element.classList.remove('opacity');
         })
-
-        price.innerHTML
 
         periodOption[contador].classList.remove('selected');
         contador--;
@@ -127,12 +127,12 @@ toggleButton.addEventListener('change', function () {
             if (index === 1) e.innerHTML = '$12/mo';
             if (index === 2) e.innerHTML = '$15/mo';
         });
-        priceServices.forEach((e,index )=>{
+        priceServices.forEach((e, index) => {
             if (index === 0) e.innerHTML = '+$1/mo'
             if (index === 1) e.innerHTML = '+$2/mo'
             if (index === 2) e.innerHTML = '+$2/mo'
         })
-        console.log('desativou');
+        valor = 'monthly'
 
     }
 })
@@ -152,6 +152,7 @@ plans.forEach(plan => {
 
 const summary = document.querySelector('.summary');
 
+
 addOns.forEach((addOn, index) => {
     addOn.addEventListener("change", () => {
         if (!addOn.classList.contains("checked")) {
@@ -169,20 +170,39 @@ addOns.forEach((addOn, index) => {
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
-                <li class="plan-option option-${index}">
-                    <p> Online service </p>
-                    <p> +1/mo </p>
-                </li>`
+                    <li class="plan-option option-${index}">
+                        <p> Online service </p>
+                        <p> +1/mo </p>
+                    </li>`
             );
 
+        } else {
+            summary.insertAdjacentHTML(
+                'beforeend',
+                `
+                <li class="plan-option option-${index}">
+                    <p> Online service </p>
+                    <p> +10/yr </p>
+                </li>`
+            );
         }
         if (index === 1 && !summary.querySelector(`.option-${index}`)) {
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
+                    <li class="plan-option option-${index}">
+                        <p> Larger storage </p>
+                        <p> +2/mo </p>
+                    </li>`
+            );
+
+        } else {
+            summary.insertAdjacentHTML(
+                'beforeend',
+                `
                 <li class="plan-option option-${index}">
                     <p> Larger storage </p>
-                    <p> +2/mo </p>
+                    <p> +20/yr </p>
                 </li>`
             );
         }
@@ -190,16 +210,26 @@ addOns.forEach((addOn, index) => {
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
+                    <li class="plan-option option-${index}">
+                        <p> Customizable Profile </p>
+                        <p> +2/mo </p>
+                    </li>`
+            );
+        } else {
+            summary.insertAdjacentHTML(
+                'beforeend',
+                `
                 <li class="plan-option option-${index}">
                     <p> Customizable Profile </p>
-                    <p> +2/mo </p>
+                    <p> +20/yr </p>
                 </li>`
             );
         }
     });
 });
 
-document.getElementById('btn-change').addEventListener('click', () => {
+document.getElementById('btn-change').addEventListener('click', (e) => {
+    e.preventDefault();
     formAtual = 1;
     const formAtivo = document.querySelector('.active');
     formAtivo.classList.remove('active');

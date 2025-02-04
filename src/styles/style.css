@@ -108,7 +108,12 @@ main {
 }
 
 .page1 .required-message {
+    display: none;
     color: red;
+}
+
+.page1 .required-message.show {
+    display: block;
 }
 
 .page1 input {
