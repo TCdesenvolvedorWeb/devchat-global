@@ -88,7 +88,6 @@ btnBack.addEventListener('click', () => {
 })
 
 let contador = 0;
-let valor = 'monthly';
 toggleButton.addEventListener('change', function () {
     if (toggleButton.checked) {
         yearlyOption.forEach(element => {
@@ -111,7 +110,6 @@ toggleButton.addEventListener('change', function () {
             if (index === 1) e.innerHTML = '+$20/yr'
             if (index === 2) e.innerHTML = '+$20/yr'
         })
-        valor = 'yearly'
 
     } else {
         yearlyOption.forEach(element => {
@@ -132,7 +130,7 @@ toggleButton.addEventListener('change', function () {
             if (index === 1) e.innerHTML = '+$2/mo'
             if (index === 2) e.innerHTML = '+$2/mo'
         })
-        valor = 'monthly'
+
 
     }
 })
@@ -166,7 +164,7 @@ addOns.forEach((addOn, index) => {
             return
         }
 
-        if (index === 0 && !summary.querySelector(`.option-${index}`)) {
+        if (index === 0 && !summary.querySelector(`.option-${index}`) && !toggleButton.checked) {
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
@@ -176,7 +174,7 @@ addOns.forEach((addOn, index) => {
                     </li>`
             );
 
-        } else {
+        } else if (index === 0 && !summary.querySelector(`.option-${index}`) && toggleButton.checked){
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
@@ -186,7 +184,7 @@ addOns.forEach((addOn, index) => {
                 </li>`
             );
         }
-        if (index === 1 && !summary.querySelector(`.option-${index}`)) {
+        if (index === 1 && !summary.querySelector(`.option-${index}`) && !toggleButton.checked) {
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
@@ -196,7 +194,7 @@ addOns.forEach((addOn, index) => {
                     </li>`
             );
 
-        } else {
+        } else if (index === 1 && !summary.querySelector(`.option-${index}`) && toggleButton.checked){
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
@@ -206,7 +204,7 @@ addOns.forEach((addOn, index) => {
                 </li>`
             );
         }
-        if (index === 2 && !summary.querySelector(`.option-${index}`)) {
+        if (index === 2 && !summary.querySelector(`.option-${index}`) && !toggleButton.checked) {
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
@@ -215,7 +213,7 @@ addOns.forEach((addOn, index) => {
                         <p> +2/mo </p>
                     </li>`
             );
-        } else {
+        } else if (index === 2 && !summary.querySelector(`.option-${index}`) && toggleButton.checked){
             summary.insertAdjacentHTML(
                 'beforeend',
                 `
