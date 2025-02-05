@@ -11,6 +11,8 @@ const inputPersonalInfo = document.querySelectorAll(".input-personal-info");
 const requiredMessage = document.querySelectorAll(".required-message");
 const addOns = document.querySelectorAll(".add-ons");
 const priceServices = document.querySelectorAll(".price-services");
+const planFinalPrice = document.querySelector(".plan-final-price");
+const planName = document.querySelector(".plan-name");
 
 let formAtual = 0;
 
@@ -117,7 +119,7 @@ toggleButton.addEventListener("change", function () {
   updateSummary();
 });
 
-plans.forEach((plan) => {
+plans.forEach((plan, index) => {
   plan.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -126,8 +128,24 @@ plans.forEach((plan) => {
     planActuallyActive && planActuallyActive.classList.remove("selected");
 
     plan.classList.toggle("selected");
+
+    showSelectedPlan();
+    calculateTotalPrice();
   });
 });
+
+const showSelectedPlan = () => {
+  const plan = document.querySelector(".selected");
+
+  const planNameSelected = plan.querySelector("h2").textContent;
+  const planPrice = plan.querySelector(".price").textContent;
+
+  if (planNameSelected && planPrice) {
+    planName.textContent = planNameSelected;
+    planFinalPrice.textContent = planPrice;
+  }
+};
+showSelectedPlan();
 
 const summary = document.querySelector(".summary");
 
@@ -137,8 +155,7 @@ const updateSummary = () => {
 
   addOns.forEach((addOn, index) => {
     const option = summary.querySelector(`.option-${index}`);
-    console.log(option);
-    
+
     if (option) {
       //atualiza o preço baseado no plano selecionado
       if (index === 0) {
@@ -156,6 +173,8 @@ const updateSummary = () => {
       }
     }
   });
+  showSelectedPlan();
+  calculateTotalPrice();
 };
 
 const showAddons = () => {
@@ -174,13 +193,15 @@ const showAddons = () => {
 
       const isYearly = toggleButton.checked;
 
-      if (index === 0 ) {
+      if (index === 0) {
         summary.insertAdjacentHTML(
           "beforeend",
           `
                               <li class="plan-option option-${index}">
                                   <p> Online service </p>
-                                  <p> ${isYearly ? "+$10/yr" : "+$1/mo"} </p>
+                                  <p class='addon-price'> ${
+                                    isYearly ? "+$10/yr" : "+$1/mo"
+                                  } </p>
                               </li>`
         );
       }
@@ -190,7 +211,9 @@ const showAddons = () => {
           `
                               <li class="plan-option option-${index}">
                                   <p> Larger storage </p>
-                                  <p> ${isYearly ? "+$20/yr" : "+$2/mo"} </p>
+                                  <p class='addon-price'> ${
+                                    isYearly ? "+$20/yr" : "+$2/mo"
+                                  } </p>
                               </li>`
         );
       }
@@ -200,7 +223,9 @@ const showAddons = () => {
           `
                               <li class="plan-option option-${index}">
                                   <p> Customizable Profile </p>
-                                  <p> ${isYearly ? "+$20/yr" : "+$2/mo"} </p>
+                                  <p class="addon-price"> ${
+                                    isYearly ? "+$20/yr" : "+$2/mo"
+                                  } </p>
                               </li>`
         );
       }
@@ -223,3 +248,28 @@ document.getElementById("btn-change").addEventListener("click", (e) => {
   stepActive.classList.remove("active-state");
   stepPosition[formAtual].classList.add("active-state");
 });
+
+const extractNumber = (string) => {
+  const match = string.match(/\d+(\.\d+)?/);
+  return match ? parseInt(match[0]) : 0;
+};
+
+const calculateTotalPrice = () => {
+  const totalValue = document.querySelector(".total-value");
+  const isYearly = toggleButton.checked;
+
+  const FinalPriceText = document.querySelector(".plan-final-price").textContent;
+  const finalPrice = extractNumber(FinalPriceText);
+
+  const addons = document.querySelectorAll(".addon-price");
+  let addonsTotal = 0;
+
+  addons.forEach((addon) => {
+    const addonPriceText = addon.textContent; 
+    addonsTotal += extractNumber(addonPriceText); 
+  });
+
+  const total = finalPrice + addonsTotal;
+  totalValue.textContent = `$${total}/${isYearly ? "yr" : "mo"}`;
+};
+calculateTotalPrice();
