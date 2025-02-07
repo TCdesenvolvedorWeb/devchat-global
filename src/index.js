@@ -198,7 +198,7 @@ const showAddons = () => {
           "beforeend",
           `
                               <li class="plan-option option-${index}">
-                                  <p> Online service </p>
+                                  <p> Integration with social networks </p>
                                   <p class='addon-price'> ${
                                     isYearly ? "+$10/yr" : "+$1/mo"
                                   } </p>
@@ -210,7 +210,7 @@ const showAddons = () => {
           "beforeend",
           `
                               <li class="plan-option option-${index}">
-                                  <p> Larger storage </p>
+                                  <p> Detailed reports </p>
                                   <p class='addon-price'> ${
                                     isYearly ? "+$20/yr" : "+$2/mo"
                                   } </p>
