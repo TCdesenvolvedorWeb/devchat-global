@@ -206,6 +206,7 @@ const showAddons = () => {
 
       if (summary.querySelector(`.option-${index}`)) {
         summary.querySelector(`.option-${index}`).remove();
+        updateSummary();
         return;
       }
 
